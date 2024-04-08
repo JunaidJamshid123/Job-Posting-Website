@@ -1,0 +1,348 @@
+:root{
+    --primaryColor:#0076de;
+    --whiteColor:#fff;
+    --blackcolor:#333;
+    --greyColor:#f6f8fa;
+    --lebalColor:#64b1f5;
+    --yellowColor:#ffd723;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Nunito',sans-serif;
+}
+
+body{
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    line-height: 1.5;
+
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 1rem 2.5rem;
+    z-index: 10;
+    color: var(--whiteColor);
+    background: transparent;
+}
+
+.navbar-logo>a {
+    letter-spacing: 2.5px;
+    /* Added 'px' after the value */
+    text-decoration: none;
+    color: var(--blackcolor);
+}
+
+.navbar-menu {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-menu>a {
+    color: var(--blackcolor);
+    text-decoration: none;
+}
+
+
+.slider-image {
+    width: 100%;
+    height: 60vh;
+    /* 40% of the viewport height */
+    object-fit: cover;
+    background-image: url("./pic3.png");
+    /* Replace "your-image-url.jpg" with the path to your image */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Adjust the opacity as needed */
+}
+
+.slider-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.slider-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.slider-content p {
+    font-size: 18px;
+}
+
+.search-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 55vh;
+    /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.search-box {
+    display: inline-block;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 400px;
+}
+
+.search-btn {
+    padding: 10px;
+    border: none;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    border-radius: 0 5px 5px 0;
+    border-left: 2px solid #333;
+    cursor: pointer;
+}
+
+.search-btn i {
+    font-size: 18px;
+}
+
+
+.filters-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.filter {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.filter label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.filter select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.filter select:focus {
+    outline: none;
+    border-color: var(--primaryColor);
+}
+
+.filter select option {
+    background-color: #fff;
+    color: #333;
+}
+
+.job-card-container {
+    margin-left: 20px;
+    /* Margin from the left */
+    padding: 20px;
+    /* Padding for aesthetics */
+}
+
+.gray-background {
+    background-color: #f6f8fa;
+    /* Gray background color */
+    padding: 20px;
+    /* Padding for aesthetics */
+    border-radius: 10px;
+    /* Border radius for rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth */
+}
+
+.job-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo img {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.job-details {
+    flex: 1;
+}
+
+.company-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.job-name {
+    font-size: 18px;
+    color: #0076de;
+    margin-bottom: 5px;
+}
+
+.job-description {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.job-time {
+    flex-shrink: 0;
+}
+
+.job-time p {
+    font-size: 14px;
+    color: #999;
+}
+
+
+.fab-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    /* Ensure FAB is above other content */
+}
+
+.fab {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    /* Ensure FAB is above other content */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    /* Ensure the image covers the entire FAB */
+    background-image: url('./plus_sign.png');
+    /* Specify the path to your image */
+    background-repeat: no-repeat;
+    /* Prevent image from repeating */
+    transition: all 0.3s ease;
+}
+
+.fab:hover {
+    background-color: #005cbf;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fab img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+/* Add job form styles */
+.add-job-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+.form-input input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styles for textarea */
+.form-input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-job-form h2 {
+    margin-bottom: 10px;
+}
+
+.add-job-form input,
+.add-job-form select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-job-form .button-group {
+    text-align: right;
+}
+
+.add-job-form .add-button,
+.add-job-form .cancel-button {
+    padding: 8px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Rest of the styles */
+/* You can add your existing styles here */

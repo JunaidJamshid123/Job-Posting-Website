@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Job Posting Website</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h2 class="navbar-logo"><a href="#">JOB HIEST</a></h2>
+        <div class="navbar-menu">
+            <a href="#jobs">Jobs</a>
+            <a href="#jobs">Companies</a>
+            <a href="#jobs">Login</a>
+            <a href="#jobs">SignUp</a>
+        </div>
+    </nav>
+
+    <div class="add-job-form" id="addJobForm">
+        <h2>Add New Job</h2>
+        <form id="jobForm">
+            <input type="text" name="companyName" placeholder="Company Name">
+            <div class="form-input">
+                <label for="company-logo">Company Logo:</label>
+                <input type="file" id="company-logo" name="company-logo" accept="image/*">
+            </div>
+            <input type="text" name="jobName" placeholder="Job Name">
+            <div class="form-input">
+                <label for="job-description">Job Description:</label>
+                <textarea id="job-description" name="job-description" rows="4"></textarea>
+            </div>
+            <input type="text" name="salary" placeholder="Salary">
+            <select name="jobLevel">
+                <option value="entry">Entry Level</option>
+                <option value="senior">Senior Level</option>
+                <option value="mid">Mid Level</option>
+            </select>
+            <select name="employmentType">
+                <option value="fulltime">Full-time</option>
+                <option value="parttime">Part-time</option>
+                <option value="intern">Internship</option>
+            </select>
+            <input type="text" name="location" placeholder="Location">
+
+            <div class="button-group">
+                <button type="submit" class="add-button">Add</button>
+                <button type="button" class="cancel-button" onclick="hideAddJobForm()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="slider-image">
+        <div class="overlay"></div>
+        <div class="slider-content">
+            <h1>Find Your Dream Job</h1>
+            <p>Let's Find</p>
+        </div>
+    </div>
+
+    <div class="search-wrapper">
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search Any Job">
+            <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <div class="filters-wrapper">
+        <div class="filter">
+            <label for="job-level">Job Level:</label>
+            <select name="job-level" id="job-level">
+                <option value="entry">Entry</option>
+                <option value="senior">Senior</option>
+                <option value="mid">Mid</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="employment-type">Employment Type:</label>
+            <select name="employment-type" id="employment-type">
+                <option value="full-time">Full-Time</option>
+                <option value="part-time">Part-Time</option>
+                <option value="internship">Internship</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="salary-range">Salary Range:</label>
+            <select name="salary-range" id="salary-range">
+                <option value="0-50000">$0 - $50,000</option>
+                <option value="50000-100000">$50,000 - $100,000</option>
+                <option value="100000-150000">$100,000 - $150,000</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="location">Location:</label>
+            <select name="location" id="location">
+                <option value="remote">Remote</option>
+                <option value="onsite">Onsite</option>
+                <option value="fulltime">Full-Time</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="job-card-container">
+        <div class="gray-background">
+            <div class="job-card">
+                <div class="company-logo">
+                    <img src="./logo_img.jpg" alt="Company Logo">
+                </div>
+                <div class="job-details">
+                    <h2 class="company-name">Tesla</h2>
+                    <h3 class="job-name">Job Name</h3>
+                    <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <div class="job-time">
+                    <p>Added: 15 minutes ago</p>
+                </div>
+            </div>
+            <!-- Existing job cards will be appended here -->
+        </div>
+    </div>
+
+    <a href="#" class="fab" onclick="showAddJobForm()"></a>
+    <script src="App.js"></script>
+</body>
+
+</html>
